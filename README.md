@@ -1,3 +1,3 @@
 # Progress-Reporter
 
-https://killzoms.github.io
+https://killzoms.github.io/Progress-Reporter/
