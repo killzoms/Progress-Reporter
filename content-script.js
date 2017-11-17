@@ -14,7 +14,7 @@ if (document.url == "https://learner.ple.platoweb.com/secondary/lessonportfolio"
             var content = "<tr><td>" + className[v] + "</td><td>" + progress[v] + "</td></tr>";
           }
         }
-        textFrame.innerHTML = "<table><tbody><tr><td>Class Name</td><td>Progress</td></tr>"+ content +"</tbody></table>;
+        textFrame.innerHTML = "<table><tbody><tr><td>Class Name</td><td>Progress</td></tr>"+ content +"</tbody></table>";
       }
     }
   }
