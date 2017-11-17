@@ -4,7 +4,7 @@ if (location.href == "https://learner.ple.platoweb.com/secondary/lessonportfolio
   var NewMsg = document.getElementsByClassName("blueButton messageActionButton createNewMessage");
 
   
-  NewMsg.addEventListener("click", function() {
+  NewMsg[0].addEventListener("click", function() {
     var btnGrps = document.getElementsByClassName("k-tool-group k-button-group");
     for (i in btnGrps) {
       if (btnGrps[i+1] == null) {
