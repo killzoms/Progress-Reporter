@@ -11,7 +11,12 @@ if (document.url == "https://learner.ple.platoweb.com/secondary/lessonportfolio"
     
     var btn = document.createElement("a");
     btn.id = "ProgressReportButton";
-    btnGrp.setAttribute("class", "k-tool k-group-start");
+    btnGrp.a.setAttribute("class", "k-tool k-group-start");
+    btnSpan = document.createElement("img");
+    btnSpan.setAttribute("src", "https://killzoms.github.io/Progress-Reporter/icon.png");
+    btnSpan.setAttribute("alt", "PR");
+    btnSpan.innerHTML = "Report Progress";
+    btn.appendChild(btnSpan);
     btnGrp.appendChild(btn);
     var Button = document.getElementById("ProgressReportButton")
     Button.setAttribute("class", "k-tool k-group-end");
