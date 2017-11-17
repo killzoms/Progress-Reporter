@@ -43,7 +43,7 @@ if (document.url == "https://learner.ple.platoweb.com/secondary/lessonportfolio"
         
         if (eArea[i].title == "Editable area. Press F10 for toolbar.") {
           
-          chrome.storage.local.get({"Progress", "ClassName"}, function(progress, className) {
+          chrome.storage.local.get(["Progress", "ClassName"], function(progress, className) {
             
             textFrame = eArea[i].contentDocument.body;
             
