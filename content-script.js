@@ -15,6 +15,7 @@ if (document.url == "https://learner.ple.platoweb.com/secondary/lessonportfolio"
     btnSpan = document.createElement("img");
     btnSpan.setAttribute("src", "https://killzoms.github.io/Progress-Reporter/icon.png");
     btnSpan.setAttribute("alt", "PR");
+    btnSpan.setAttribute("class", "k-tool-icon k-reportProgress");
     btnSpan.innerHTML = "Report Progress";
     btn.appendChild(btnSpan);
     btnGrp.appendChild(btn);
