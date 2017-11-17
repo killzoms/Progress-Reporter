@@ -10,7 +10,7 @@
     "default_popup": "popup.html"
   },
   "content_scripts": {
-    "matches": ["https://learner.ple.platoweb.com/secondary/lessonportfolio", "https://learner.ple.platoweb.com/secondary/messages"],
+    "matches": {"https://learner.ple.platoweb.com/secondary/lessonportfolio", "https://learner.ple.platoweb.com/secondary/messages"},
     "js": ["content-script.js"]
   },
   
