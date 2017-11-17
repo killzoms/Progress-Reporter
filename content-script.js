@@ -2,13 +2,15 @@ if (document.url == "https://learner.ple.platoweb.com/secondary/lessonportfolio"
   var port = chrome.runtime.connect({name: "Information"});
 } else if (document.url == "https://learner.ple.platoweb.com/secondary/messages") {
   var NewMsg = document.getElementsByClassName("blueButton messageActionButton createNewMessage");
-  for (i in btnGrps) {
-    if (btnGrps[i+1] == null) {
-      var btnGrp = btnGrps[i]
-    }
-  }
+
+  
   NewMsg.addEventListener("click", function() {
-    
+    var btnGrps = document.getElementsByClassName("k-tool-group k-button-group");
+    for (i in btnGrps) {
+      if (btnGrps[i+1] == null) {
+        var btnGrp = btnGrps[i]
+      }
+    }
     var btn = document.createElement("a");
     btn.id = "ProgressReportButton";
     btnGrp.a.setAttribute("class", "k-tool k-group-start");
