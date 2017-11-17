@@ -4,14 +4,13 @@ if (location.href == "https://learner.ple.platoweb.com/secondary/lessonportfolio
 } else if (location.href == "https://learner.ple.platoweb.com/secondary/messages") {
   var NewMsg = document.getElementsByClassName("blueButton messageActionButton createNewMessage");
 
-  
+var v = false  
   NewMsg[0].addEventListener("click", function() {
     var btnGrps = document.getElementsByClassName("k-tool-group k-button-group");
-    while btnGrps == null
-    var btnGrps = document.getElementsByClassName("k-tool-group k-button-group");
+
     for (i in btnGrps) {
       var x = i + 1
-      if (btnGrps[x] == null) {
+      if (btnGrps[x] == undefined) {
         var btnGrp = btnGrps[i]
         btnGrp.children[0].setAttribute("class", "k-tool k-group-start");
       }
