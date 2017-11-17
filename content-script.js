@@ -1,6 +1,6 @@
-if (document.url == "https://learner.ple.platoweb.com/secondary/lessonportfolio") {
+if (location.href == "https://learner.ple.platoweb.com/secondary/lessonportfolio") {
   var port = chrome.runtime.connect({name: "Information"});
-} else if (document.url == "https://learner.ple.platoweb.com/secondary/messages") {
+} else if (location.href == "https://learner.ple.platoweb.com/secondary/messages") {
   var NewMsg = document.getElementsByClassName("blueButton messageActionButton createNewMessage");
 
   
