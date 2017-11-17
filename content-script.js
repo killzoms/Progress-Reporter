@@ -59,7 +59,7 @@ if (document.url == "https://learner.ple.platoweb.com/secondary/lessonportfolio"
             
             textFrame.innerHTML = "<table><tbody><tr><td>Class Name</td><td>Progress</td></tr>"+ content +"</tbody></table>";
             
-          };
+          });
         };
       };
     });
