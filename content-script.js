@@ -67,5 +67,5 @@ if (location.href == "https://learner.ple.platoweb.com/secondary/lessonportfolio
       };
     });
   });
-});
+}, 500);
 };
