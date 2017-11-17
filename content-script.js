@@ -1,3 +1,4 @@
+var i;
 if (location.href == "https://learner.ple.platoweb.com/secondary/lessonportfolio") {
   var port = chrome.runtime.connect({name: "Information"});
 } else if (location.href == "https://learner.ple.platoweb.com/secondary/messages") {
@@ -7,7 +8,8 @@ if (location.href == "https://learner.ple.platoweb.com/secondary/lessonportfolio
   NewMsg[0].addEventListener("click", function() {
     var btnGrps = document.getElementsByClassName("k-tool-group k-button-group");
     for (i in btnGrps) {
-      if (btnGrps[i+1] == null) {
+      var x = i + 1
+      if (btnGrps[x] == null) {
         var btnGrp = btnGrps[i]
       }
     }
