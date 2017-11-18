@@ -1,15 +1,33 @@
 var i;
 if (location.href == "https://learner.ple.platoweb.com/secondary/lessonportfolio") {
+  setTimeout(function() {
+  var classNames = [];
+  var progress = [];
+  var pro = document.getElementsByClassName("progressStats");
   var claNames = document.getElementsByClassName("assignmentName media");
-  var pro = document.getElementsByClassName("progressBarInfo");
-  for (i in claNames) {
-    var classNames[i] = claNames[i].firstChild.innerHTML;
-    var progress[i] = pro[i].innerHTML;
+  var v = claNames.length;
+
+  for (var i = 0; i < v; i++) {
+    clasNames = claNames[i].firstChild.nextSibling;
+    classNames[i] = clasNames.outerText;
+    var b = pro[i].firstChild.nextSibling.nextSibling.nextSibling;
+    if (b == null) {
+      progress[i] = "0%";
+    } else {
+    var t = pro[i].firstChild.nextSibling.nextSibling.nextSibling.firstChild.nextSibling.firstChild.nextSibling.nextSibling.nextSibling;
+    if (t.className == "progressBarContainer") {
+      progress[i] = "100%";
+    } else {
+      console.log(t.innerHTML);
+      progress[i] = t.innerHTML;
+    };
+    };
   };
   var info = {"ClassName": classNames};
   chrome.storage.local.set(info);
   info = {"Progress": progress};
   chrome.storage.local.set(info);
+}, 500);
 } else if (location.href == "https://learner.ple.platoweb.com/secondary/messages") {
   var NewMsg = document.getElementsByClassName("blueButton messageActionButton createNewMessage");
 
