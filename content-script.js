@@ -1,6 +1,15 @@
 var i;
 if (location.href == "https://learner.ple.platoweb.com/secondary/lessonportfolio") {
-  var port = chrome.runtime.connect({name: "Information"});
+  var claNames = document.getElementsByClassName("assignmentName media");
+  var pro = document.getElementsByClassName("progressBarInfo");
+  for (i in claNames) {
+    classNames[i] = claNames[i].firstChild.innerHTML;
+    progress[i] = pro[i].innerHTML;
+  };
+  var info = ["ClassName": classNames];
+  chrome.storage.local.set(info);
+  info = "Progress": progress;
+  chrome.storage.local.set(info);
 } else if (location.href == "https://learner.ple.platoweb.com/secondary/messages") {
   var NewMsg = document.getElementsByClassName("blueButton messageActionButton createNewMessage");
 
