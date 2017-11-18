@@ -8,4 +8,4 @@ The above page is a simple place holder for now.
 
 * ~~finish content-script.js~~
 * finish background.js
-* remove ~~popup.html~~
+* ~~remove popup.html~~
