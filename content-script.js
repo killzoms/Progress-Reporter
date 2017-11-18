@@ -42,18 +42,17 @@ var v = false
                   
           if (eArea.title == "Editable area. Press F10 for toolbar.") {
           
-            chrome.storage.local.get(["Progress", "ClassName"], function(progress, className) {
+            chrome.storage.local.get({Progress:[], ClassName:[]}, function(Cstorage) {
             var content = "";
               textFrame = eArea.contentDocument.body;
-              if (className != undefined) {
-              for (v in className) {
+              console.log(Cstorage.ClassName)
+              for (v in Cstorage.ClassName) {
                 if (content != "") {
-                  content += "<tr><td>" + className[v] + "</td><td>" + progress[v] + "</td></tr>";
+                  content += "<tr><td>" + Cstorage.ClassName[v] + "</td><td>" + Cstorage.Progress[v] + "</td></tr>";
                 } else {
-                  content = "<tr><td>" + className[v] + "</td><td>" + progress[v] + "</td></tr>";
+                  content = "<tr><td>" + Cstorage.ClassName[v] + "</td><td>" + Cstorage.Progress[v] + "</td></tr>";
                 };
               };
-              }
               textFrame.innerHTML = "<table class='k-table'><tbody><tr><td>Class Name</td><td>Progress</td></tr>"+ content +"</tbody></table>";
             
             });
