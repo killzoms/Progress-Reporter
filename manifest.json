@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
 
-  "name": "Manifest Destiny",
-  "description": "Bored",
+  "name": "Progress Reporter",
+  "description": "Reports Progress on Platoweb.com",
   "version": "1.0",
 
   "browser_action": {
