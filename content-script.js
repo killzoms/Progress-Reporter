@@ -43,11 +43,11 @@ var v = false
           if (eArea.title == "Editable area. Press F10 for toolbar.") {
           
             chrome.storage.local.get(["Progress", "ClassName"], function(progress, className) {
-            var content;
+            var content = "";
               textFrame = eArea.contentDocument.body;
               if (className != undefined) {
               for (v in className) {
-                if (content != null) {
+                if (content != "") {
                   content += "<tr><td>" + className[v] + "</td><td>" + progress[v] + "</td></tr>";
                 } else {
                   content = "<tr><td>" + className[v] + "</td><td>" + progress[v] + "</td></tr>";
