@@ -5,4 +5,3 @@
 * ~~finish background.js~~
 * ~~remove popup.html~~
 * upload packed extension
-* upload extension to google webstore
