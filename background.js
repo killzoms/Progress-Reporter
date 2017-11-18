@@ -7,7 +7,7 @@ chrome.runtime.onConnect.addListener(function(port) {
 });		
 
 
-var info = "ClassName": classNames;
+var info = ["ClassName": classNames];
 chrome.storage.local.set(info);
 info = "Progress": progress;
 chrome.storage.local.set(info);
