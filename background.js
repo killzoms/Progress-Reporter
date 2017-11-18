@@ -1,7 +1,5 @@
-//placeholder
-chrome.runtime.onConnect.addListener(function(port) {
-  console.assert(port.name == "Information");
-  port.onMessage.addListener(function(msg) {
-    chrome.storage.local.set(msg);
-  });
-});
+
+var msg = "ClassName": classNames;
+chrome.storage.local.set(msg);
+var msg = "Progress": progress;
+chrome.storage.local.set(msg);
