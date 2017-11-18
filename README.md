@@ -6,6 +6,7 @@ The above page is a simple place holder for now.
 
 # todo
 
-* ~~finish content-script.js~~
+* ~~finish progress report button~~
+* finish content-script.js
 * finish background.js
 * ~~remove popup.html~~
