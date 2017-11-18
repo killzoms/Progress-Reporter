@@ -8,7 +8,9 @@ var v = false
   NewMsg[0].addEventListener("click", function() {
     setTimeout(function() {
       var btnGrps = document.getElementsByClassName("k-tool-group k-button-group");
-      btnGrps[6].children[0].setAttribute("class", "k-tool k-group-start");
+      var btnGrp = btnGrps[6].firstChild
+      btnGrp.setAttribute("class", "k-tool k-group-start");
+
       var btn = document.createElement("a");
       btn.id = "ProgressReportButton";
     
@@ -31,35 +33,31 @@ var v = false
       });
     
       Button.addEventListener("mouseout", function() {
-        Button.setAttribute("class", "k-tool k-group-end-k-state-hover");
+        Button.setAttribute("class", "k-tool k-group-end k-state-hover");
       });
     
       Button.addEventListener("click", function() {
       
-        var eArea = document.getElementsByClassName("k-content");
-        var i;
-      
-        for (i in eArea) {
-          
-          if (eArea[i].title == "Editable area. Press F10 for toolbar.") {
+        var eArea = document.getElementsByClassName("k-content")[4];
+                  
+          if (eArea.title == "Editable area. Press F10 for toolbar.") {
           
             chrome.storage.local.get(["Progress", "ClassName"], function(progress, className) {
             
-              textFrame = eArea[i].contentDocument.body;
-            
+              textFrame = eArea.contentDocument.body;
+              if (className != undefined) {
               for (v in className) {
-                if (content != null) {
+                if (content != undefined) {
                   content += "<tr><td>" + className[v] + "</td><td>" + progress[v] + "</td></tr>";
                 } else {
                   var content = "<tr><td>" + className[v] + "</td><td>" + progress[v] + "</td></tr>";
                 };
               };
-              
-              textFrame.innerHTML = "<table><tbody><tr><td>Class Name</td><td>Progress</td></tr>"+ content +"</tbody></table>";
+              }
+              textFrame.innerHTML = "<table class='k-table'><tbody><tr><td>Class Name</td><td>Progress</td></tr>"+ content +"</tbody></table>";
             
             });
           };
-        };
       });
     }, 500);
   });
