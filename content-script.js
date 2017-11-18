@@ -8,13 +8,7 @@ var v = false
   NewMsg[0].addEventListener("click", function() {
     setTimeout(function() {
       var btnGrps = document.getElementsByClassName("k-tool-group k-button-group");
-      for (i in btnGrps) {
-        var x = i + 1
-        if (btnGrps[x] == undefined) {
-          var btnGrp = btnGrps[i]
-          btnGrp.children[0].setAttribute("class", "k-tool k-group-start");
-        }
-      }
+      btnGrps[6].children[0].setAttribute("class", "k-tool k-group-start");
       var btn = document.createElement("a");
       btn.id = "ProgressReportButton";
     
