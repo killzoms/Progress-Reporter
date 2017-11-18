@@ -8,11 +8,7 @@
   "browser_action": {
     "default_icon": "icon.png"
   },
-  
-  "background": {
-    "scripts": ["background.js"]
-  },
-  
+
   "content_scripts": [{
     "matches": ["https://learner.ple.platoweb.com/secondary/lessonportfolio", "https://learner.ple.platoweb.com/secondary/messages"],
     "js": ["content-script.js"]
