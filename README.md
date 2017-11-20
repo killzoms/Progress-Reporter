@@ -6,3 +6,7 @@
 4. Click the Progress Report button next to the View HTML button.
 5. Progress will be recorded as a table in the message box.
 6. Progress Report is ready to be sent!
+
+# Issues
+
+If an issue is found please report it in the issues tab.
