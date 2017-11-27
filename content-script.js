@@ -1,4 +1,12 @@
 var i;
+
+function progressReportList() {
+  var tabsReplyContainer = document.getElementsByClassName("tabsReplyContainer")[0];
+  tabsReplyContainer.style.width = "402px";
+  var MessageContainer = tabsReplyContainer.nextSibling;
+  MessageContainer.style.left = "414.4px";
+}
+
 if (location.href == "https://learner.ple.platoweb.com/secondary/lessonportfolio") {
   setTimeout(function() {
   var classNames = [];
@@ -7,7 +15,7 @@ if (location.href == "https://learner.ple.platoweb.com/secondary/lessonportfolio
   var claNames = document.getElementsByClassName("assignmentName media");
   var v = claNames.length;
 
-  for (var i = 0; i < v; i++) {
+  for (i = 0; i < v; i++) {
     clasNames = claNames[i].firstChild.nextSibling;
     classNames[i] = clasNames.outerText;
     var b = pro[i].firstChild.nextSibling.nextSibling.nextSibling;
@@ -31,7 +39,8 @@ if (location.href == "https://learner.ple.platoweb.com/secondary/lessonportfolio
 } else if (location.href == "https://learner.ple.platoweb.com/secondary/messages") {
   var NewMsg = document.getElementsByClassName("blueButton messageActionButton createNewMessage");
 
-var v = false  
+  var v = false
+  progressReportList();
   NewMsg[0].addEventListener("click", function() {
     setTimeout(function() {
       var btnGrps = document.getElementsByClassName("k-tool-group k-button-group");
