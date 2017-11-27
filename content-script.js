@@ -67,7 +67,7 @@ var v;
         var contentLength = document.getElementsByClassName("k-content").length;
         for (var i = 0; i < contentLength; i++) {
           var eArea = document.getElementsByClassName("k-content")[i];
-                  
+                  console.log(eArea);
           if (eArea.title == "Editable area. Press F10 for toolbar.") {
           
             chrome.storage.local.get({Progress:[], ClassName:[]}, function(Cstorage) {
