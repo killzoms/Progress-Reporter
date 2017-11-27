@@ -85,7 +85,7 @@ var v = false
             });
           };
       });
-    }, 500);
+    }, 600);
   });
   var tabsReplyContainer = document.getElementsByClassName("tabsReplyContainer")[0];
   tabsReplyContainer.style.width = "402px";
