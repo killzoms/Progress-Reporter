@@ -64,8 +64,9 @@ var v;
       });
     
       Button.addEventListener("click", function() {
-      
-        var eArea = document.getElementsByClassName("k-content")[4];
+        var contentLength = document.getElementsByClassName("k-content");
+        for (var i = 0; i < contentLength; i++) {
+          var eArea = document.getElementsByClassName("k-content")[i];
                   
           if (eArea.title == "Editable area. Press F10 for toolbar.") {
           
@@ -84,6 +85,7 @@ var v;
             
             });
           };
+        };
       });
     }, 600);
   });
