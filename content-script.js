@@ -89,10 +89,11 @@ var v;
       });
     }, 600);
   });
+  setTimeout(function() {
   var tabsReplyContainer = document.getElementsByClassName("tabsReplyContainer")[0];
   tabsReplyContainer.style.width = "400px";
-  var TabsRepC = document.getElementsByClassName("inboxTab k-content k-state-active mCustomScrollbar _mCS_1")[0];
-  TabsRepC.style.width = "415px";
+  var tabsRepC = document.getElementsByClassName("inboxTab k-content k-state-active mCustomScrollbar _mCS_1")[0];
+  tabsRepC.style.width = "415px";
   var MessageContainer = document.getElementsByClassName("messageDetailsArea")[0];
   MessageContainer.style.left = "424.4px";
   var LastTab = document.getElementsByClassName("archive k-item k-last k-state-default")[0];
@@ -116,8 +117,50 @@ var v;
   var msgListLength = msgList.children.length;
   var msgListChildren = msgList.children;
   for (var i = 0; i < msgListLength; i++) {
-    console.log(msgListChildren[i]);
+    var subject = msgListChildren[i].getAttribute("data-subject");
+    if (subject == "RE: Progress Report") {
+      var PRInfoChild = PRInfo.firstChild.nextSibling;
+      console.log(PRInfoChild);
+      PRInfoChild.appendChild(msgListChildren[i]);
+      msgListLength = msgListLength - 1
+    }
   }
   tabsList.appendChild(PRInfo);
-
+  console.log(PRInfo);
+  PRTab.addEventListener("click", function() {
+    var activeTab = document.getElementsByClassName("k-tab-on-top k-state-active")[0];
+    activeTab.className = activeTab.className.replace("k-tab-on-top k-state-active", "");
+    var tabName = activeTab.className.split(" ")[0];
+    var tab = document.getElementsByClassName(tabName + "Tab")[0];
+    tab.style.opacity = 0;
+    tab.style.display = "none";
+    PRTab.className = "progress-report k-item k-state-default k-last k-tab-on-top k-state-active";
+    PRInfo.style.opacity = 1;
+    PRInfo.style.display = "block";
+    var iTab = document.getElementsByClassName("inbox k-item k-first k-state-default")[0];
+    if (iTab.className == "inbox k-item k-first k-state-default") {
+      iTab.addEventListener("click", function() {
+        PRTab.className = "progress-report k-item k-state-default k-last";
+        PRInfo.style.opacity = 0;
+        PRInfo.style.display = "none";
+      });
+    }
+    var iTab = document.getElementsByClassName("sent k-item k-state-default")[0];
+    if (iTab.className == "sent k-item k-state-default") {
+      iTab.addEventListener("click", function() {
+        PRTab.className = "progress-report k-item k-state-default k-last";
+        PRInfo.style.opacity = 0;
+        PRInfo.style.display = "none";
+      });
+    }
+    var iTab = document.getElementsByClassName("archive k-item k-state-default")[0];
+    if (iTab.className == "archive k-item k-state-default") {
+      iTab.addEventListener("click", function() {
+        PRTab.className = "progress-report k-item k-state-default k-last";
+        PRInfo.style.opacity = 0;
+        PRInfo.style.display = "none";
+      });
+    }
+  });
+  }, 5000);
 };
