@@ -4,7 +4,7 @@ function progressReportList() {
   var tabsReplyContainer = document.getElementsByClassName("tabsReplyContainer")[0];
   tabsReplyContainer.style.width = "402px";
   var MessageContainer = document.getElementsByClassName("messageDetailsArea")[0];
-  MessageContainer.style.left = "414.4px";
+  MessageContainer.style.left = "424.4px";
 }
 
 if (location.href == "https://learner.ple.platoweb.com/secondary/lessonportfolio") {
