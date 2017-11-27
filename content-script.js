@@ -3,7 +3,7 @@ var i;
 function progressReportList() {
   var tabsReplyContainer = document.getElementsByClassName("tabsReplyContainer")[0];
   tabsReplyContainer.style.width = "402px";
-  var MessageContainer = tabsReplyContainer.nextSibling;
+  var MessageContainer = document.getElementsByClassName("messageDetailsArea")[0];
   MessageContainer.style.left = "414.4px";
 }
 
