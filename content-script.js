@@ -31,7 +31,7 @@ if (location.href == "https://learner.ple.platoweb.com/secondary/lessonportfolio
 } else if (location.href == "https://learner.ple.platoweb.com/secondary/messages") {
   var NewMsg = document.getElementsByClassName("blueButton messageActionButton createNewMessage");
 
-var v = false  
+var v;
   NewMsg[0].addEventListener("click", function() {
     setTimeout(function() {
       var btnGrps = document.getElementsByClassName("k-tool-group k-button-group");
