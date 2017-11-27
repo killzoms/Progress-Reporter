@@ -118,7 +118,7 @@ var v;
   var msgListChildren = msgList.children;
   for (var i = 0; i < msgListLength; i++) {
     var subject = msgListChildren[i].getAttribute("data-subject");
-    if (subject == "RE: Progress Report") {
+    if (subject == "Progress Report") {
       var PRInfoChild = PRInfo.firstChild.nextSibling;
       console.log(PRInfoChild);
       PRInfoChild.appendChild(msgListChildren[i]);
