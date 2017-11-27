@@ -64,7 +64,7 @@ var v;
       });
     
       Button.addEventListener("click", function() {
-        var contentLength = document.getElementsByClassName("k-content");
+        var contentLength = document.getElementsByClassName("k-content").length;
         for (var i = 0; i < contentLength; i++) {
           var eArea = document.getElementsByClassName("k-content")[i];
                   
