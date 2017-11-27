@@ -22,6 +22,12 @@ function progressReportList() {
   var newAriaCtrls = curAriaCtrls.slice(0, -1) + "4";
   PRInfo.setAttribute("id", newAriaCtrls);
   var tabsList = document.getElementsByClassName("tabs k-tabstrip k-widget k-header k-floatwrap k-tabstrip-top")[0];
+  var msgList = document.getElementsByClassName("messagesList k-widget k-listview")[0];
+  var msgListLength = msgList.children.length;
+  var msgListChildren = msgList.children;
+  for (var i = 0; i < msgListLength; i++) {
+    console.log(msgListChildren[i]);
+  }
   tabsList.appendChild(PRInfo);
   
 }
@@ -59,7 +65,7 @@ if (location.href == "https://learner.ple.platoweb.com/secondary/lessonportfolio
   var NewMsg = document.getElementsByClassName("blueButton messageActionButton createNewMessage");
 
   var v = false
-  progressReportList();
+
   NewMsg[0].addEventListener("click", function() {
     setTimeout(function() {
       var btnGrps = document.getElementsByClassName("k-tool-group k-button-group");
@@ -115,4 +121,5 @@ if (location.href == "https://learner.ple.platoweb.com/secondary/lessonportfolio
       });
     }, 500);
   });
+  progressReportList();
 };
