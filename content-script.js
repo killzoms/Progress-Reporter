@@ -90,6 +90,7 @@ var v;
     }, 600);
   });
 } else if (location.href == "https://portal.ple.platoweb.com/Sensei/Messaging") {
+  console.log("Detected Teacher");
   setTimeout(function() {
 /*  var tabsReplyContainer = document.getElementsByClassName("tabsReplyContainer")[0];
   var tabsRepC = document.getElementsByClassName("inboxTab k-content k-state-active")[0];
