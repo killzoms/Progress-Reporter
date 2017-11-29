@@ -91,9 +91,9 @@ var v;
   });
 } elseif (location.href == "https://portal.platoweb.com/sensei/messages") {
   setTimeout(function() {
-  var tabsReplyContainer = document.getElementsByClassName("tabsReplyContainer")[0];
+/*  var tabsReplyContainer = document.getElementsByClassName("tabsReplyContainer")[0];
   var tabsRepC = document.getElementsByClassName("inboxTab k-content k-state-active")[0];
-  var MessageContainer = document.getElementsByClassName("messageDetailsArea")[0];
+  var MessageContainer = document.getElementsByClassName("messageDetailsArea")[0];*/
   var LastTab = document.getElementsByClassName("k-item k-last k-state-default")[2];
   var PRTab = LastTab.cloneNode(true);
   LastTab.className = "k-item k-state-default";
@@ -104,14 +104,14 @@ var v;
   PRTab.setAttribute("aria-controls", newAriaCtrls);
   var tabsList = document.getElementsByClassName("k-tabstrip-items k-reset")[0];
   tabsList.appendChild(PRTab);
-  var ArchTab = document.getElementsByClassName("archiveTab k-content")[0];
+/*  var ArchTab = document.getElementsByClassName("archiveTab k-content")[0];
   var PRInfo = ArchTab.cloneNode(true);
   PRInfo.className = "progress-reportTab k-content";
   var curAriaCtrls = PRInfo.getAttribute("id");
   var newAriaCtrls = curAriaCtrls.slice(0, -1) + "4";
-  PRInfo.setAttribute("id", newAriaCtrls);
+  PRInfo.setAttribute("id", newAriaCtrls);*/
   var tabsList = document.getElementsByClassName("tabs k-tabstrip k-widget k-header k-floatwrap k-tabstrip-top")[0];
-  var msgList = document.getElementsByClassName("messagesList k-widget k-listview")[0];
+/*  var msgList = document.getElementsByClassName("messagesList k-widget k-listview")[0];
   var msgListLength = msgList.children.length;
   var msgListChildren = msgList.children;
   for (var i = 0; i < msgListLength; i++) {
@@ -157,6 +157,6 @@ var v;
         PRInfo.style.display = "none";
       });
     }
-  });
+  });*/
   }, 1000);
 };
