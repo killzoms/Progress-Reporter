@@ -89,7 +89,7 @@ var v;
       });
     }, 600);
   });
-} elseif (location.href == "https://portal.platoweb.com/sensei/messages") {
+} else if (location.href == "https://portal.platoweb.com/sensei/messages") {
   setTimeout(function() {
 /*  var tabsReplyContainer = document.getElementsByClassName("tabsReplyContainer")[0];
   var tabsRepC = document.getElementsByClassName("inboxTab k-content k-state-active")[0];
