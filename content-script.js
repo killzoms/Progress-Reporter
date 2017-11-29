@@ -89,16 +89,14 @@ var v;
       });
     }, 600);
   });
+} elseif (location.href == "https://portal.platoweb.com/sensei/messages") {
   setTimeout(function() {
   var tabsReplyContainer = document.getElementsByClassName("tabsReplyContainer")[0];
-  tabsReplyContainer.style.width = "400px";
-  var tabsRepC = document.getElementsByClassName("inboxTab k-content k-state-active mCustomScrollbar _mCS_1")[0];
-  tabsRepC.style.width = "415px";
+  var tabsRepC = document.getElementsByClassName("inboxTab k-content k-state-active")[0];
   var MessageContainer = document.getElementsByClassName("messageDetailsArea")[0];
-  MessageContainer.style.left = "424.4px";
-  var LastTab = document.getElementsByClassName("archive k-item k-last k-state-default")[0];
+  var LastTab = document.getElementsByClassName("k-item k-last k-state-default")[2];
   var PRTab = LastTab.cloneNode(true);
-  LastTab.className = "archive k-item k-state-default";
+  LastTab.className = "k-item k-state-default";
   PRTab.firstChild.nextSibling.firstChild.innerHTML = "Progress Reports";
   PRTab.className = "progress-report k-item k-last k-state-default";
   var curAriaCtrls = PRTab.getAttribute("aria-controls");
@@ -130,31 +128,29 @@ var v;
   PRTab.addEventListener("click", function() {
     var activeTab = document.getElementsByClassName("k-tab-on-top k-state-active")[0];
     activeTab.className = activeTab.className.replace("k-tab-on-top k-state-active", "");
-    var tabName = activeTab.className.split(" ")[0];
-    var tab = document.getElementsByClassName(tabName + "Tab")[0];
-    tab.style.opacity = 0;
-    tab.style.display = "none";
+    activeTab.style.opacity = 0;
+    activeTab.style.display = "none";
     PRTab.className = "progress-report k-item k-state-default k-last k-tab-on-top k-state-active";
     PRInfo.style.opacity = 1;
     PRInfo.style.display = "block";
-    var iTab = document.getElementsByClassName("inbox k-item k-first k-state-default")[0];
-    if (iTab.className == "inbox k-item k-first k-state-default") {
+    var iTab = document.getElementsByClassName("k-item k-first k-state-default")[0];
+    if (iTab.className == "k-item k-first k-state-default") {
       iTab.addEventListener("click", function() {
         PRTab.className = "progress-report k-item k-state-default k-last";
         PRInfo.style.opacity = 0;
         PRInfo.style.display = "none";
       });
     }
-    var iTab = document.getElementsByClassName("sent k-item k-state-default")[0];
-    if (iTab.className == "sent k-item k-state-default") {
+    var iTab = document.getElementsByClassName("k-item k-state-default")[1];
+    if (iTab.className == "k-item k-state-default") {
       iTab.addEventListener("click", function() {
         PRTab.className = "progress-report k-item k-state-default k-last";
         PRInfo.style.opacity = 0;
         PRInfo.style.display = "none";
       });
     }
-    var iTab = document.getElementsByClassName("archive k-item k-state-default")[0];
-    if (iTab.className == "archive k-item k-state-default") {
+    var iTab = document.getElementsByClassName("k-item k-state-default")[2];
+    if (iTab.className == "k-item k-state-default") {
       iTab.addEventListener("click", function() {
         PRTab.className = "progress-report k-item k-state-default k-last";
         PRInfo.style.opacity = 0;
@@ -162,5 +158,5 @@ var v;
       });
     }
   });
-  }, 5000);
+  }, 1000);
 };
