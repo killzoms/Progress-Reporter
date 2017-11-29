@@ -3,7 +3,7 @@
 
   "name": "Progress Reporter",
   "description": "Reports Progress on Platoweb.com",
-  "version": "1.0",
+  "version": "1.1",
 
   "browser_action": {
     "default_icon": "icon.png"
