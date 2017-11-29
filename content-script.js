@@ -94,7 +94,7 @@ var v;
 /*  var tabsReplyContainer = document.getElementsByClassName("tabsReplyContainer")[0];
   var tabsRepC = document.getElementsByClassName("inboxTab k-content k-state-active")[0];
   var MessageContainer = document.getElementsByClassName("messageDetailsArea")[0];*/
-  var LastTab = document.getElementsByClassName("k-item k-last k-state-default")[2];
+  var LastTab = document.getElementsByClassName("k-item k-state-default k-last")[2];
   var PRTab = LastTab.cloneNode(true);
   LastTab.className = "k-item k-state-default";
   PRTab.firstChild.nextSibling.firstChild.innerHTML = "Progress Reports";
