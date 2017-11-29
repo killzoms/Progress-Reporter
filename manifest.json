@@ -10,7 +10,7 @@
   },
 
   "content_scripts": [{
-    "matches": ["https://learner.ple.platoweb.com/secondary/lessonportfolio", "https://learner.ple.platoweb.com/secondary/messages"],
+    "matches": ["https://learner.ple.platoweb.com/secondary/lessonportfolio", "https://learner.ple.platoweb.com/secondary/messages", "https://portal.ple.platoweb.com/Sensei/Messaging"],
     "js": ["content-script.js"]
   }],
   
