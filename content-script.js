@@ -24,9 +24,9 @@ if (location.href == "https://learner.ple.platoweb.com/secondary/lessonportfolio
     };
   };
   var info = {"ClassName": classNames};
-  chrome.storage.local.set(info);
+  browser.storage.local.set(info);
   info = {"Progress": progress};
-  chrome.storage.local.set(info);
+  browser.storage.local.set(info);
 }, 500);
 } else if (location.href == "https://learner.ple.platoweb.com/secondary/messages") {
   var NewMsg = document.getElementsByClassName("blueButton messageActionButton createNewMessage");
@@ -69,7 +69,7 @@ var v = false
                   
           if (eArea.title == "Editable area. Press F10 for toolbar.") {
           
-            chrome.storage.local.get({Progress:[], ClassName:[]}, function(Cstorage) {
+            browser.storage.local.get({Progress:[], ClassName:[]}, function(Cstorage) {
             var content = "";
               textFrame = eArea.contentDocument.body;
               console.log(Cstorage.ClassName)
