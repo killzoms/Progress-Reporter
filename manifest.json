@@ -9,6 +9,11 @@
     "default_icon": "icon.png"
   },
 
+  "-ms-preload": {
+    "backgroundScript": "backgroundScriptsAPIBridge.js",
+    "contentScript": "contentScriptsAPIBridge.js"
+  },
+
   "content_scripts": [{
     "matches": ["https://learner.ple.platoweb.com/secondary/lessonportfolio", "https://learner.ple.platoweb.com/secondary/messages"],
     "js": ["content-script.js"]
